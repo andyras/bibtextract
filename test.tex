@@ -1,0 +1,22 @@
+\documentclass[aip,jcp,amsmath,amssymb,reprint,floatfix]{revtex4-1}
+
+\AtBeginDocument{\let\hbar=\hslash}
+
+\begin{document}
+\title{Test for citations}
+\author{Andrew M. Rasmussen}
+\date{\today}
+
+\maketitle
+
+\section{Introduction}\label{introduction}
+
+This sentence has multiple citations.\cite{Skolnick2004,Wood2010}
+
+This sentence has but one.\cite{Kos2005}
+
+This sentence has a commented citation.%\cite{Cho2010}
+
+\bibliography{newlibrary}
+
+\end{document}

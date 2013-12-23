@@ -1,0 +1,10 @@
+*.swp
+*.un~
+*pdf
+*aux
+*bbl
+*blg
+*log
+*toc
+*Notes.bib
+newlibrary.bib
