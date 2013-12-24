@@ -139,8 +139,6 @@ with open(args.texFile, 'r') as tex:
                 print '%d citation "%s"' % (idx, cite)
                 print '%d done parsing \cite command' % idx
 
-            idx += 1
-
         idx += 1
 
 #### write new .bib file
