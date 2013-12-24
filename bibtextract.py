@@ -114,8 +114,7 @@ cites = set([]) # set of citations
 with open(args.texFile, 'r') as tex:
     chars = tex.read()
     while (idx < len(chars)):
-        # find \cite or \onlinecite commands
-        if (chars[idx-5:idx] == 'cite{'):
+        if ((chars[idx-6:idx] == '\cite{') or (chars[idx-12:idx] == '\onlinecite{')):
             if (debug):
                 print '%d \cite command' % idx
 
