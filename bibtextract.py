@@ -21,8 +21,6 @@
 #                                                                              #
 ################################################################################
 
-debug = False
-
 #### parse arguments
 
 import argparse
@@ -31,8 +29,11 @@ parser = argparse.ArgumentParser(description='This script extracts the bibtex ci
 parser.add_argument('bibFile', help='.bib library to be parsed', type=str, metavar='<bibtex library>')
 parser.add_argument('texFile', help='.tex file to be parsed', type=str, metavar='<tex file>')
 parser.add_argument('newBibFile', help='minimal .bib library to be created', type=str, metavar='<new library>')
+parser.add_argument('-d', '--debug', help='turn on debug output', action='store_true', default=False)
 
 args = parser.parse_args()
+
+debug = args.debug
 
 # error checking
 if (args.bibFile == args.newBibFile):
@@ -131,7 +132,7 @@ with open(args.texFile, 'r') as tex:
                     cite += chars[idx]
 
                 idx += 1
-            
+
             # at end of \cite command, add citation to list, reset
             cites.add(cite.strip())
             cite = ''
